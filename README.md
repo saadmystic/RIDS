@@ -67,3 +67,22 @@ Simulated Execution
       |
       v
 Execution History
+## Screenshots
+
+### Dashboard
+
+<p align="center">
+  <img src="docs/images/dashboard.png" alt="RIDS Dashboard" width="100%">
+</p>
+
+### Attack Chain Detection
+
+<p align="center">
+  <img src="docs/images/attack-chain.png" alt="RIDS Attack Chain Detection" width="100%">
+</p>
+
+### Response Execution
+
+<p align="center">
+  <img src="docs/images/response-execution.png" alt="RIDS Response Execution" width="100%">
+</p>
