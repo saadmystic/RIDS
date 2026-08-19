@@ -67,6 +67,7 @@ Simulated Execution
       |
       v
 Execution History
+
 ## Screenshots
 
 ### Dashboard
