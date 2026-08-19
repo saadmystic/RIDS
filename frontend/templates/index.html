@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RIDS Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>R</span>IDS
+        </div>
+
+        <nav>
+            <a href="/" class="active">Dashboard</a>
+            <a href="#">Live Traffic</a>
+            <a href="#">Alerts</a>
+            <a href="#">Behavior</a>
+            <a href="#">Incidents</a>
+            <a href="#">Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <header>
+
+            <div>
+                <h1>Security Dashboard</h1>
+                <p>Network Intrusion Detection System</p>
+            </div>
+
+            <div class="system-status" id="rids-status">
+                Loading RIDS status...
+            </div>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+<!-- STATISTICS -->
+<section class="stats">
+
+    <div class="card">
+        <p>PACKETS</p>
+        <h2 id="packet-count">0</h2>
+        <span>Total captured packets</span>
+    </div>
+
+    <div class="card">
+        <p>ALERTS</p>
+        <h2 id="alert-count">0</h2>
+        <span>Risk assessments</span>
+    </div>
+
+    <div class="card">
+        <p>HIGH RISK</p>
+        <h2 id="high-risk-count">0</h2>
+        <span>High-risk sources</span>
+    </div>
+
+    <div class="card">
+        <p>MEDIUM RISK</p>
+        <h2 id="medium-risk-count">0</h2>
+        <span>Medium-risk sources</span>
+    </div>
+
+    <div class="card">
+        <p>LOW RISK</p>
+        <h2 id="low-risk-count">0</h2>
+        <span>Low-risk sources</span>
+    </div>
+
+    <div class="card">
+        <p>ENGINE</p>
+        <h2 id="engine-status">ON</h2>
+        <span>Detection engine</span>
+    </div>
+
+</section>
+
+        <!-- NETWORK MONITORING -->
+<section class="panel">
+
+    <div class="panel-header">
+        <h2>Live Traffic</h2>
+        <span>LIVE</span>
+    </div>
+
+    <div class="traffic-container">
+
+        <table class="traffic-table">
+
+            <thead>
+                <tr>
+                    <th>TIME</th>
+                    <th>SOURCE</th>
+                    <th>DESTINATION</th>
+                    <th>PROTOCOL</th>
+                    <th>SIZE</th>
+                </tr>
+            </thead>
+
+            <tbody id="traffic-body">
+                <tr>
+                    <td colspan="5" class="loading">
+                        Loading network traffic...
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>	
+
+<section class="panel">
+
+    <div class="panel-header">
+        <h2>Recent Alerts</h2>
+        <span id="alert-live-status">LIVE</span>
+    </div>
+
+    <div id="alerts-container" class="alerts-container">
+        <p>Loading alerts...</p>
+    </div>
+
+</section>
+
+</section>
+
+<!-- SECURITY INCIDENTS -->
+<section class="panel">
+
+    <div class="panel-header">
+        <h2>Security Incidents</h2>
+        <span id="incident-live-status">LIVE</span>
+    </div>
+
+    <div class="traffic-container">
+
+        <table class="traffic-table">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>SOURCE</th>
+                    <th>TYPE</th>
+                    <th>SEVERITY</th>
+                    <th>RISK</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+
+            <tbody id="incidents-body">
+                <tr>
+                    <td colspan="6" class="loading">
+                        Loading incidents...
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+ <!-- ATTACK CHAINS -->
+<section class="panel">
+
+    <div class="panel-header">
+        <h2>Attack Chains</h2>
+        <span id="attack-chain-live-status">LIVE</span>
+    </div>
+
+    <div id="attack-chains-container" class="alerts-container">
+        <p>Loading attack chains...</p>
+    </div>
+
+</section>
+<section class="panel">
+
+    <div class="panel-header">
+        <h2>Response Recommendations</h2>
+        <span id="response-live-status">ACTIVE</span>
+    </div>
+
+    <div id="response-container" class="alerts-container">
+        <p>Loading response recommendations...</p>
+    </div>
+
+</section>
+<!-- RESPONSE EXECUTION HISTORY -->
+<section class="panel">
+
+    <div class="panel-header">
+        <h2>Response Execution History</h2>
+          <span id="execution-live-status">LIVE</span>
+    </div>
+
+    <div class="traffic-container">
+
+        <table class="traffic-table">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>SOURCE</th>
+                    <th>ACTION</th>
+                    <th>STATUS</th>
+                    <th>TIME</th>
+                </tr>
+            </thead>
+
+            <tbody id="response-executions-body">
+
+                <tr>
+                    <td colspan="5" class="loading">
+                        Loading response executions...
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+</main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

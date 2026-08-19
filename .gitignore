@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# JavaScript backups
+*.bak
+
+# Environment / secrets
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
