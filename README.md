@@ -1,3 +1,13 @@
+<p align="center">
+  <img src="docs/images/dashboard.png" alt="RIDS Dashboard" width="100%">
+</p>
+
+<p align="center">
+  A Python-based network intrusion detection system with behavioral analysis,
+  event correlation, attack-chain detection, and simulated response execution.
+</p>
+
+---
 # RIDS — Network Intrusion Detection & Response System
 
 RIDS is a Python-based Network Intrusion Detection & Response System designed to detect suspicious network activity, analyze risk, correlate security events, identify attack chains, and generate simulated response actions.
